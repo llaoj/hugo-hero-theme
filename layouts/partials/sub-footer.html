@@ -8,12 +8,13 @@
             <li><strong>Phone: </strong>{{ .Site.Data.contact.phone }}</li>
             {{ end }}
             {{ if .Site.Data.contact.email }}
-            <li><strong>Email: </strong><a href="mailto:{{ .Site.Data.contact.email }}">
-                {{ .Site.Data.contact.email }}</a></li>
-              {{ end }}
+            <li><strong>Email: </strong><a href="mailto:{{ .Site.Data.contact.email }}">{{ .Site.Data.contact.email }}</a></li>
+            {{ end }}
           </ul>
           <ul>
-            <li class="zerostatic"><a href="https://www.zerostatic.io">www.zerostatic.io</a></li>
+            {{ if .Site.Data.beian }}
+            <li class="zerostatic"><a href="{{ .Site.Data.beian.url }}">{{ .Site.Data.beian.code }}</a></li>
+            {{ end }}
           </ul>
         </div>
       </div>
